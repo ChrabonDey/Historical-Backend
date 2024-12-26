@@ -100,7 +100,7 @@ async function run() {
       }
     });
 
-    // GET: Fetch all artifacts with optional search functionality
+   
     app.get("/history", async (req, res) => {
       const { search } = req.query;
 
