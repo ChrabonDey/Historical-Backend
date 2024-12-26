@@ -17,7 +17,7 @@ app.use(
 );
 app.use(cookieParser());
 
-// Middleware to verify token
+
 const verifyToken = (req, res, next) => {
   const token = req.cookies?.token; // or req.headers['authorization']
   if (!token) {
