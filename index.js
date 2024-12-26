@@ -106,7 +106,7 @@ async function run() {
 
       try {
         const query = search
-          ? { name: { $regex: search, $options: "i" } } // Case-insensitive regex search
+          ? { name: { $regex: search, $options: "i" } } 
           : {};
 
         const artifacts = await historyCollection.find(query).toArray();
