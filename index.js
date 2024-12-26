@@ -27,7 +27,7 @@ const verifyToken = (req, res, next) => {
     if (err) {
       return res.status(401).send({ message: "Unauthorized" });
     }
-    console.log(decoded); // Log the decoded token to check user info
+    console.log(decoded);
     req.user = decoded;
     next();
   });
