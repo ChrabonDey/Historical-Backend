@@ -161,12 +161,12 @@ async function run() {
 
         const update = hasLiked
           ? {
-              $inc: { likeCount: -1 }, // Decrease likeCount
-              $pull: { likedBy: email }, // Remove email from likedBy array
+              $inc: { likeCount: -1 }, 
+              $pull: { likedBy: email },
             }
           : {
-              $inc: { likeCount: 1 }, // Increase likeCount
-              $addToSet: { likedBy: email }, // Add email to likedBy array
+              $inc: { likeCount: 1 }, 
+              $addToSet: { likedBy: email }, 
             };
 
         const result = await historyCollection.updateOne({ _id: new ObjectId(id) }, update);
