@@ -63,7 +63,7 @@ async function run() {
         .send({ success: true });
     });
 
-    // Route to logout and clear token
+    
     app.post("/logout", (req, res) => {
       res
         .clearCookie("token", {
@@ -73,7 +73,7 @@ async function run() {
         .send({ success: true });
     });
 
-    // POST: Add a new artifact
+   
     app.post("/history", async (req, res) => {
       const artifact = req.body;
 
