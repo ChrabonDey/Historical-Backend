@@ -50,7 +50,6 @@ async function run() {
 
     const historyCollection = client.db("HistoricalDB").collection("Historical");
 
-    // Route to generate JWT token
     app.post("/jwt", (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
